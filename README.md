@@ -9,7 +9,7 @@ Aplicação Full Stack simples para **cadastro de usuários**, utilizando:
 
 ## 🚀 Funcionalidades
 
-- Criar, listar e excluir usuários  
+- Criar,listar,editar e excluir usuários  
 - Banco de dados em memória (H2)  
 - API REST com Spring Boot  
 - Front-end simples em HTML/JS  
@@ -18,7 +18,8 @@ Aplicação Full Stack simples para **cadastro de usuários**, utilizando:
 ---
 
 ## 🛠️ Requisitos
-
+- [Extention Pack for Java v0.30.4](Extensão)
+- [Spring Initializr Java Support v0.11.2](Extensão)
 - [Java 17+](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)  
 - [Maven 3.9+](https://maven.apache.org/download.cgi)
 
@@ -26,11 +27,25 @@ Aplicação Full Stack simples para **cadastro de usuários**, utilizando:
 
 ## ⚙️ Como rodar o projeto
 
-Abra o terminal na pasta do projeto (onde está o `pom.xml`) e execute os seguintes comandos:
+Abra o terminal na pasta do projeto (onde está o `pom.xml`(no meu caso: cd "C:\Users\USER\Downloads\usuarios\usuarios")) e execute os seguintes comandos:
+
+```bash
+cd "C:\Users\USER\Downloads\usuarios\usuarios"
+```
+
+### setar a jdk 17:
+```bash
+$env:JAVA_HOME="C:\Program Files\Java\jdk-17.0.12"
+```
+
+```bash
+$env:Path="$env:JAVA_HOME\bin;" + $env:Path  
+```
 
 ### 1️⃣ Limpar e instalar dependências
+
 ```bash
-mvn clean install -DskipTests
+mvn clean install 
 ```
 
 ### 2️⃣ Rodar a aplicação
@@ -39,7 +54,7 @@ mvn spring-boot:run
 ```
 
 A aplicação será iniciada em:
-👉 **http://localhost:8080**
+👉 **http://localhost:8080/index.html**
 
 ---
 
@@ -85,12 +100,13 @@ src
 
 Após iniciar a aplicação (`mvn spring-boot:run`), abra no navegador:
 
-👉 [http://localhost:8080](http://localhost:8080)
+👉 [http://localhost:8080/index.html](url)
 
 Você verá a tela de **Cadastro de Usuários**, onde pode:
 - Inserir nome, email e idade  
 - Clicar em **Adicionar**  
 - Visualizar a lista de usuários  
+- Editar usuários
 - Excluir registros  
 
 ---
@@ -100,9 +116,10 @@ Você verá a tela de **Cadastro de Usuários**, onde pode:
 ### Parar a aplicação
 Pressione `Ctrl + C` no terminal.
 
-### Limpar e recompilar o projeto
+### Limpar e recompilar o projeto 
+
 ```bash
-mvn clean package -DskipTests
+mvn clean package
 ```
 
 ### Rodar novamente
@@ -122,4 +139,4 @@ mvn spring-boot:run
 ## 👨‍💻 Autor
 
 **Thiago Anastácio**  
-Projeto desenvolvido como parte de estudos em **Spring Boot + Frontend básico com JS**.
+Projeto desenvolvido como parte de estudos em **Spring Boot + Frontend básico com HTML/CSS e JS**.
