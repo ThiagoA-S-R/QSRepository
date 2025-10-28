@@ -30,6 +30,11 @@ public class UserControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+
+
+
+
+    
     // Simula o repositório sem acessar banco real
     @MockBean
     private UserRepository userRepository;
